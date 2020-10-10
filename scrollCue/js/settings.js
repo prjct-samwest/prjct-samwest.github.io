@@ -18,7 +18,7 @@ const settings = (function (){
             '        <nav class="Header-icon">\n' +
             '            <ul>\n' +
             '                <li><a href="https://github.com/prjct-samwest/scrollCue"><img src="images/gh.svg" width="30" alt="View on GitHub"></a></li>\n' +
-            '                <li class="Header-profile"><a href="../"><img src="../_assets/images/my.png" width="30" alt="SamWest"></a></li>\n' +
+            '                <li class="Header-profile"><a href="../"><img src="../assets/images/my.png" width="30" alt="SamWest"></a></li>\n' +
             '            </ul>\n' +
             '        </nav>';
 

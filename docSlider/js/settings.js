@@ -20,7 +20,7 @@
             '            <li class="Header-dl"><a href="document.html"><img src="images/doc.svg" alt="Document" width="24">Document</a></li>\n' +
             '            <li class="Header-dl sp"><a href="#" class="dlink"><img src="images/dl.svg" alt="Download" width="24">Download</a></li>\n' +
             '            <li class="Header-gh"><a href="https://github.com/prjct-samwest/docSlider/"><img src="images/gh.svg" alt="View on GitHub" width="30"></a></li>\n' +
-            '            <li class="Header-profile"><a href="../"><img src="../_assets/images/my.png" width="30" alt="SamWest"></a></li>\n' +
+            '            <li class="Header-profile"><a href="../"><img src="../assets/images/my.png" width="30" alt="SamWest"></a></li>\n' +
             '        </ul>\n' +
             '    </div>\n' +
             '</header>';

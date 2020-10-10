@@ -62,6 +62,6 @@
 
     }
 
-    //getJSON('projects.json');
+    getJSON('projects.json');
 
 })();
