@@ -1,0 +1,136 @@
+body {
+  background-color: #eee;
+  margin: 70px 20px 0;
+  min-width: 1100px;
+  line-height: 1.6;
+}
+
+code {
+  display: block;
+  overflow-x: auto;
+  padding: .5em;
+  color: #abb2bf;
+  background: #282c34;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex .flex-in {
+  width: 100%;
+  position: relative;
+}
+
+.flex .flex-side {
+  width: 350px;
+  margin-right: 20px;
+}
+
+.Toc {
+  position: fixed;
+  width: 270px;
+  padding-right: 20px;
+  top: 70px;
+  bottom: 0;
+  overflow: auto;
+  margin-bottom: 34px;
+}
+
+.Toc::-webkit-scrollbar {
+  width: 4px;
+}
+
+.Toc::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.Toc::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 10px;
+}
+
+.Toc ul {
+  margin-bottom: 1em;
+}
+
+.Toc li {
+  list-style-type: none;
+}
+
+.Toc a {
+  display: block;
+  text-decoration: none;
+  color: #222;
+  font-size: 13px;
+  padding: 1px 4px;
+}
+
+.Toc a:hover {
+  background-color: #ddd;
+}
+
+.Toc a.active {
+  background-color: #ccc;
+}
+
+.Document {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.Document section:not(:last-child) {
+  margin-bottom: 2em;
+}
+
+.Document figure {
+  border: 2px solid #ccc;
+  padding: 30px;
+  display: inline-block;
+  margin: 1em 0 0;
+}
+
+.Document pre:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.Document mark {
+  background-color: #f0f0f0;
+  display: inline-block;
+  padding: 2px;
+}
+
+.Document table {
+  max-width: 100%;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Document table tr {
+  border-top: 1px solid #c6cbd1;
+}
+
+.Document table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.Document table th, .Document table td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.Document h1 {
+  font-size: 30px;
+  border-bottom: solid 1px #eee;
+  margin-bottom: .5em;
+}
+
+.Document h2 {
+  color: #444;
+  font-size: 22px;
+  margin-bottom: .5em;
+  border-bottom: solid 1px #eee;
+}

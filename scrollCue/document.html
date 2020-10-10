@@ -1,0 +1,443 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prjct-samwest.github.io/scrollCue/">
+    <meta property="og:image" content="https://prjct-samwest.github.io/scrollCue/images/ogp.jpg">
+    <meta property="og:site_name" content="Customize :: scrollCue.js - JavaScript Plugin | Created by SamWest.">
+    <meta property="og:title" content="Customize :: scrollCue.js - JavaScript Plugin | Created by SamWest.">
+    <meta property="og:description" content="scrollCue.js is a JavaScript plugin that works without jQuery. Show elements by scrolling.">
+
+    <title>Document - docSlider.js</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/document.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/atom-one-dark.min.css">
+</head>
+<body id="top">
+<div class="wrapper">
+<div class="flex">
+    <div class="flex-in flex-side">
+
+        <section class="Toc">
+            <h1>Basic</h1>
+            <ul>
+                <li><a href="#Overview">Overview</a></li>
+                <li><a href="#Install">Install</a></li>
+                <li><a href="#Usage">Usage</a></li>
+                <li><a href="#Examples">Markup Examples</a>
+
+                    <ul>
+                        <li><a href="#Standard">Standard</a></li>
+                        <li><a href="#Parent">Parent wrap</a></li>
+                        <li><a href="#Grouping">Grouping wrap</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="#Advanced">Advanced Examples</a>
+
+                    <ul>
+                        <li><a href="#Duration">[data-duration]</a></li>
+                        <li><a href="#Interval">[data-interval]</a></li>
+                        <li><a href="#Delay">[data-delay]</a></li>
+                        <li><a href="#Order">[data-order]</a></li>
+                        <li><a href="#Class">[data-addClass]</a></li>
+                        <li><a href="#Reverse">[data-sort="reverse"]</a></li>
+                        <li><a href="#Random">[data-sort="random"]</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="#Animations">Animation types</a></li>
+                <li><a href="#Options">Options</a></li>
+                <li><a href="#Methods">Methods</a></li>
+            </ul>
+
+            <h1>Advanced</h1>
+            <ul>
+                <li><a href="#Add">Add animation types</a></li>
+                <li><a href="#Change">Default values change in SCSS</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#top">&#9650; Page Top</a></li>
+            </ul>
+            
+        </section>
+
+    </div>
+    <div class="flex-in">
+
+        <div id="Overview" class="Document">
+            <section>
+                <h1>Overview</h1>
+                <p>scrollCue.js is a JavaScript plugin that works without jQuery.
+                    <br>Show elements by scrolling.<br>
+                    It works on modern browser as Chrome, Firefox, Safari, Edge, IE11.</p>
+                <figure><img src="images/logo.svg" alt="scrollCue.js" width="300"></figure>
+            </section>
+
+            <section>
+                <h2>Demo</h2>
+                <p><a href="https://prjct-samwest.github.io/scrollCue/" target="_blank" rel="noopener">https://prjct-samwest.github.io/scrollCue/</a></p>
+            </section>
+
+            <section>
+                <h2>Version</h2>
+                <p>The latest version is <span class="ver">-</span></p>
+            </section>
+
+            <section>
+                <h2>License</h2>
+                <p>Created by SamWest.<br>
+                    Copyright (c) 2020 SamWest.<br>
+                    This plugin is released under the MIT License.</p>
+            </section>
+        </div>
+        <div id="Install" class="Document">
+            <section>
+                <h1>Install</h1>
+                <p>Install it from npm or download the file.</p>
+            </section>
+
+            <section>
+                <h2>npm install</h2>
+                <pre><code>npm install scrollcue</code></pre>
+            </section>
+
+            <section>
+                <h2>File Download</h2>
+                <a href="#" class="dlink" data-text>aaa</a>
+            </section>
+        </div>
+        <div id="Usage" class="Document">
+            <section>
+                <h1>Usage</h1>
+                <p>Add a CSS to the <mark>&lt;head&gt;</mark> tag.</p>
+                <pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;scrollCue.css&quot;&gt;</code></pre>
+                <p>Add a JavaScript to just before the <mark>&lt;/body&gt;</mark> tag.</p>
+                <pre><code class="html">&lt;script src=&quot;scrollCue.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                <p>Initialize scrollCue.js</p>
+                <pre><code class="html">&lt;script&gt;scrollCue.init();&lt;/script&gt;</code></pre>
+            </section>
+        </div>
+        <div id="Examples" class="Document">
+            <section>
+                <h1>Markup Examples</h1>
+                <p>See the <a href="examples.html" target="_blank" rel="noopener">"Examples"</a> page to see how it works and to test the animation.</p>
+            </section>
+
+            <section id="Standard">
+                <h2>Standard</h2>
+                <p>Set the <mark>"data-cue"</mark> attribute in the target element and specify the animation type.</p>
+                <pre><code class="html">&lt;img src=&quot;001.jpg&quot; data-cue=&quot;fadeIn&quot;&gt;
+&lt;img src=&quot;002.jpg&quot; data-cue=&quot;fadeIn&quot;&gt;
+&lt;img src=&quot;003.jpg&quot; data-cue=&quot;fadeIn&quot;&gt;
+&lt;img src=&quot;004.jpg&quot; data-cue=&quot;fadeIn&quot;&gt;
+&lt;img src=&quot;005.jpg&quot; data-cue=&quot;fadeIn&quot;&gt;
+&lt;img src=&quot;006.jpg&quot; data-cue=&quot;fadeIn&quot;&gt;</code></pre>
+            </section>
+
+            <section id="Parent">
+                <h2>Parent wrap</h2>
+                <p>You can wrap it in a parent element by setting the <mark>"data-cues"</mark> attribute.</p>
+                <pre><code class="html">&lt;div data-cues=&quot;fadeIn&quot;&gt;
+    &lt;img src=&quot;001.jpg&quot;&gt;
+    &lt;img src=&quot;002.jpg&quot;&gt;
+    &lt;img src=&quot;003.jpg&quot;&gt;
+    &lt;img src=&quot;004.jpg&quot;&gt;
+    &lt;img src=&quot;005.jpg&quot;&gt;
+    &lt;img src=&quot;006.jpg&quot;&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <section id="Grouping">
+                <h2>Grouping wrap</h2>
+                <p>You can group target elements by setting the <mark>"data-group"</mark> attribute.<br>
+                    With grouping, when the first element is triggered, the remaining elements are also triggered sequentially, regardless of the scroll amount.</p>
+                <pre><code class="html">&lt;div data-cues=&quot;fadeIn&quot; data-group=&quot;images&quot;&gt;
+    &lt;img src=&quot;001.jpg&quot;&gt;
+    ...
+    &lt;img src=&quot;008.jpg&quot;&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+        </div>
+        <div id="Advanced" class="Document">
+            <section>
+                <h1>Advanced Examples</h1>
+                <p>See the <a href="examples.html" target="_blank" rel="noopener">"Examples"</a> page to see how it works and to test the animation.</p>
+            </section>
+
+            <section id="Duration">
+                <h2>[data-duration]</h2>
+                <p>You can set the showing time of the element.(ms)</p>
+                <pre><code class="html">&lt;div data-cues=&quot;fadeIn&quot; data-duration=&quot;2000&quot;&gt;
+    &lt;img src=&quot;001.jpg&quot;&gt;
+    &lt;img src=&quot;002.jpg&quot;&gt;
+    &lt;img src=&quot;003.jpg&quot; data-duration=&quot;500&quot;&gt;
+    &lt;img src=&quot;004.jpg&quot; data-duration=&quot;500&quot;&gt;
+    &lt;img src=&quot;005.jpg&quot;&gt;
+    &lt;img src=&quot;006.jpg&quot;&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <section id="Interval">
+                <h2>[data-interval]</h2>
+                <p>You can set the showing interval time of the element.(ms)</p>
+                <pre><code class="html">&lt;div data-cues=&quot;fadeIn&quot; data-interval=&quot;-200&quot;&gt;
+    &lt;img src=&quot;001.jpg&quot;&gt;
+    &lt;img src=&quot;002.jpg&quot;&gt;
+    &lt;img src=&quot;003.jpg&quot; data-interval=&quot;1000&quot;&gt;
+    &lt;img src=&quot;004.jpg&quot; data-interval=&quot;-0.2&quot;&gt;   &lt;!-- 200ms --&gt;
+    &lt;img src=&quot;005.jpg&quot;&gt;
+    &lt;img src=&quot;006.jpg&quot;&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <section id="Delay">
+                <h2>[data-delay]</h2>
+                <p>You can set the showing delay time of the element.(ms)</p>
+                <pre><code class="html">&lt;div data-cues=&quot;fadeIn&quot; data-delay=&quot;1000&quot;&gt;
+    &lt;img src=&quot;001.jpg&quot;&gt;
+    &lt;img src=&quot;002.jpg&quot; data-delay=&quot;2000&quot;&gt;
+    &lt;img src=&quot;003.jpg&quot;&gt;
+    &lt;img src=&quot;004.jpg&quot;&gt;
+    &lt;img src=&quot;005.jpg&quot;&gt;
+    &lt;img src=&quot;006.jpg&quot;&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <section id="Order">
+                <h2>[data-order]</h2>
+                <p>You can set the showing order of the elements individually.<br>
+                    If you set a negative number, the order will be from the end.</p>
+                <pre><code class="html">&lt;div data-cues=&quot;fadeIn&quot; data-group=&quot;images&quot;&gt;
+    &lt;img src=&quot;001.jpg&quot; data-order=&quot;-1&quot;&gt;        &lt;!--  6  --&gt;
+    &lt;img src=&quot;002.jpg&quot;&gt;                        &lt;!--  3  --&gt;
+    &lt;img src=&quot;003.jpg&quot;&gt;                        &lt;!--  4  --&gt;
+    &lt;img src=&quot;004.jpg&quot;&gt;                        &lt;!--  5  --&gt;
+    &lt;img src=&quot;005.jpg&quot; data-order=&quot;1&quot;&gt;         &lt;!--  1  --&gt;
+    &lt;img src=&quot;006.jpg&quot; data-order=&quot;2&quot;&gt;         &lt;!--  2  --&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <section id="Class">
+                <h2>[data-addClass]</h2>
+                <p>You can set any class names when showing the element.</p>
+                <pre><code class="html">&lt;div data-cues=&quot;fadeIn&quot; data-addClass=&quot;border foo bar&quot;&gt;
+    &lt;img src=&quot;001.jpg&quot;&gt;
+    &lt;img src=&quot;002.jpg&quot; data-order=&quot;border-red&quot;&gt;
+    &lt;img src=&quot;003.jpg&quot;&gt;
+    &lt;img src=&quot;004.jpg&quot; data-order=&quot;border-red&quot;&gt;
+    &lt;img src=&quot;005.jpg&quot;&gt;
+    &lt;img src=&quot;006.jpg&quot;&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <section id="Reverse">
+                <h2>[data-sort="reverse"]</h2>
+                <p>You can reverse the showing order of the elements.</p>
+                <pre><code class="html">&lt;div data-cues=&quot;fadeIn&quot; data-group=&quot;images&quot; data-sort=&quot;reverse&quot;&gt;
+    &lt;img src=&quot;001.jpg&quot;&gt;
+    &lt;img src=&quot;002.jpg&quot;&gt;
+    &lt;img src=&quot;003.jpg&quot;&gt;
+    &lt;img src=&quot;004.jpg&quot;&gt;
+    &lt;img src=&quot;005.jpg&quot;&gt;
+    &lt;img src=&quot;006.jpg&quot;&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+            <section id="Random">
+                <h2>[data-sort="random"]</h2>
+                <p>You can randomize the showing order of the elements.</p>
+                <pre><code class="html">&lt;div data-cues=&quot;fadeIn&quot; data-group=&quot;images&quot; data-sort=&quot;random&quot;&gt;
+    &lt;img src=&quot;001.jpg&quot;&gt;
+    &lt;img src=&quot;002.jpg&quot;&gt;
+    &lt;img src=&quot;003.jpg&quot;&gt;
+    &lt;img src=&quot;004.jpg&quot;&gt;
+    &lt;img src=&quot;005.jpg&quot;&gt;
+    &lt;img src=&quot;006.jpg&quot;&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+        </div>
+        <div id="Animations" class="Document">
+            <section>
+                <h1>Animation types</h1>
+                <p>There are 15 different animations available.<br>
+                    You can add / custom animation by editing slideCue.css. <a href="#Add">Click here for details</a></p>
+                <ul style="margin-top: 1em">
+                    <li>・fadeIn</li>
+                    <li>・slideInLeft</li>
+                    <li>・slideInRight</li>
+                    <li>・slideInDown</li>
+                    <li>・slideInUp</li>
+                    <li>・zoomIn</li>
+                    <li>・zoomOut</li>
+                    <li>・rotateIn</li>
+                    <li>・bounceIn</li>
+                    <li>・bounceInLeft</li>
+                    <li>・bounceInRight</li>
+                    <li>・bounceInDown</li>
+                    <li>・bounceInUp</li>
+                    <li>・flipInX</li>
+                    <li>・flipInY</li>
+                </ul>
+            </section>
+        </div>
+        <div id="Options" class="Document">
+            <section>
+                <h1>Options</h1>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>duration</td>
+                        <td>Number</td>
+                        <td>600</td>
+                        <td>Time to show the element.(ms)</td>
+                    </tr>
+                    <tr>
+                        <td>interval</td>
+                        <td>Number</td>
+                        <td>-0.7</td>
+                        <td>Time interval for showing side-by-side elements.<br>You can use negative numbers.(Integer or Real number)<br>
+                            <mark>Integer</mark> : (ms)<br>
+                            <mark>Real number</mark> : Percentage of duration time of the previous element.</td>
+                    </tr>
+                    <tr>
+                        <td>percentage</td>
+                        <td>Number</td>
+                        <td>0.75</td>
+                        <td>Percentage of screen height to start showing elements.(Real number from 0 to 1)</td>
+                    </tr>
+                    <tr>
+                        <td>enable</td>
+                        <td>Boolean</td>
+                        <td>true</td>
+                        <td>Whether or not to start the process automatically when the site loads.<br>
+                            If false, call scrollCue.enable(true) at optional time.</td>
+                    </tr>
+                    <tr>
+                        <td>docSlider</td>
+                        <td>Boolean</td>
+                        <td>false</td>
+                        <td>Used in combination with docSlider.js.<br>
+                            More information about docSiider.js. <a href="../docSlider/" target="_blank" rel="noopener">can be found here.</a></td>
+                    </tr>
+                    <tr>
+                        <td>pageChangeReset</td>
+                        <td>Boolean</td>
+                        <td>false</td>
+                        <td>Used in combination with docSlider.js.<br>
+                            Each time you change the pages, the animation will play over again.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Examples</h2>
+                <pre><code class="javascript">scrollCue.init({
+    duration : 300,
+    interval : -200,
+    percentage : 0.8
+});</code></pre>
+            </section>
+
+        </div>
+        <div id="Methods" class="Document">
+            <section>
+                <h1>Methods</h1>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Arguments</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody><tr>
+                        <td>init</td>
+                        <td>options</td>
+                        <td>Initialize scrollCue.js</td>
+                    </tr>
+                    <tr>
+                        <td>update</td>
+                        <td></td>
+                        <td>Update scrollCue.js</td>
+                    </tr>
+                    <tr>
+                        <td>enable</td>
+                        <td>toggle (boolean)</td>
+                        <td>Enable / disable all scrollCue.js's operations.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <div id="Add" class="Document">
+            <section>
+                <h1>Add animation types</h1>
+                <p>If you want to add a new animation type, write it in <mark>scrollCue.css</mark> or <mark>scrollCue.scss</mark> as follows.</p>
+            <pre><code class="scss">/**  ---------------
+     foo
+*/
+[data-cue=&quot;foo&quot;],[data-cues=&quot;foo&quot;]&gt;*{
+  opacity: 0;
+}
+@keyframes foo {
+  from{
+    ...
+  }
+  to{
+    opacity : 1;
+    ...
+  }
+}</code></pre>
+            </section>
+        </div>
+        <div id="Change" class="Document">
+            <section>
+                <h1>Default values change in SCSS</h1>
+                <p>You can control some animation types at once by changing the value of the variable.</p>
+                <h3><mark>scrollCue.scss</mark> LINE : 13 to 17</h3>
+                <pre><code class="scss">
+// COMMON SETTING VALUE
+
+$shift : 30px;       // Used by slideInLeft, slideInRight, slideInDown, slideInUp
+$zoom : 0.8;         // Used by ZoomIn, ZoomOut
+$rotate : -15deg;    // Used by rotateIn
+  </code></pre>
+            </section>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<footer class="Footer">
+    <i class="Footer-pageTop"></i>
+    <p>&copy; SamWest.</p>
+</footer>
+
+<script src="js/settings.min.js"></script>
+<script>
+    settings.printHeader('document');
+</script>
+<script src="js/document.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prjct-samwest.github.io/scrollCue/">
+    <meta property="og:image" content="https://prjct-samwest.github.io/scrollCue/images/ogp.jpg">
+    <meta property="og:site_name" content="Customize :: scrollCue.js - JavaScript Plugin | Created by SamWest.">
+    <meta property="og:title" content="Customize :: scrollCue.js - JavaScript Plugin | Created by SamWest.">
+    <meta property="og:description" content="scrollCue.js is a JavaScript plugin that works without jQuery. Show elements by scrolling.">
+
+    <link rel="stylesheet" href="css/scrollCue.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/atom-one-light.min.css">
+
+    <title>Customize :: scrollCue.js - JavaScript Plugin | Created by SamWest.</title>
+</head>
+<body>
+<div class="wrapper">
+
+    <section class="Example Section ex2">
+        <h2 class="Example-title Title" data-cue="slideInUp">CSS CUSTOMIZE</h2>
+
+        <section class="Example-section">
+            <div class="Section-inner" data-cues="slideInUp" data-group="list1">
+                <h3 class="Title2">ADD ANIMATION TYPE</h3>
+                <p>If you want to add a new animation type, write it in <mark>scrollCue.css</mark> or <mark>scrollCue.scss</mark> as follows.</p>
+                <pre><code>
+    /**  ---------------
+         foo
+    */
+    [data-cue="foo"],[data-cues="foo"]>*{
+      opacity: 0;
+    }
+    @keyframes foo {
+      from{
+        ...
+      }
+      to{
+        opacity : 1;
+        ...
+      }
+    }
+                    </code></pre>
+            </div>
+        </section>
+
+        <section class="Example-section" data-cue="slideInUp">
+            <div class="Section-inner" data-cues="slideInUp" data-group="list2">
+                <h3 class="Title2">DEFAULT VALUES CHANGE IN SCSS</h3>
+                <p>You can control some animation types at once by changing the value of the variable.<br>
+                <mark>scrollCue.scss</mark> LINE : 13 to 17
+                </p>
+                <pre><code>
+    // COMMON SETTING VALUE
+
+   $shift : 30px;       // Used by slideInLeft, slideInRight, slideInDown, slideInUp
+   $zoom : 0.8;         // Used by ZoomIn, ZoomOut
+   $rotate : -15deg;    // Used by rotateIn
+                    </code></pre>
+            </div>
+        </section>
+
+
+    </section>
+
+    <section class="Mv"></section>
+
+</div>
+<script src="js/settings.min.js"></script>
+<script>
+    settings.printHeader('customize');
+    settings.printMv('.Mv','logo',true);
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+<script>hljs.initHighlighting();</script>
+<script src="js/scrollCue.min.js"></script>
+<script>scrollCue.init({});</script>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+</body>
+</html>

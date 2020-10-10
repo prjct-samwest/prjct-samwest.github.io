@@ -1,0 +1,673 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prjct-samwest.github.io/docSlider/">
+    <meta property="og:image" content="https://prjct-samwest.github.io/docSlider/images/ogp.png">
+    <meta property="og:site_name" content="Document - docSlider.js">
+    <meta property="og:title" content="Document - docSlider.js">
+    <meta property="og:description" content="docSlider.js is a JavaScript plugin that works without jQuery.Change the web sections to a one-page scroll.">
+
+    <title>Document - docSlider.js</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/document.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/atom-one-dark.min.css">
+</head>
+<body id="top">
+
+<div class="flex">
+    <div class="flex-in flex-side">
+
+        <section class="Toc">
+            <h1>Basic</h1>
+            <ul>
+                <li><a href="#Overview">Overview</a></li>
+                <li><a href="#Install">Install</a></li>
+                <li><a href="#Usage">Usage</a></li>
+                <li><a href="#Options">Options</a></li>
+                <li><a href="#Methods">Methods</a></li>
+            </ul>
+            <h1>Features</h1>
+            <ul>
+                <li><a href="#Key">Supports key-press</a></li>
+                <li><a href="#Jump">Jump from external site to any page</a></li>
+                <li><a href="#Scroll">Supports scroll elements</a></li>
+                <li><a href="#Class">Automatically added class names</a></li>
+            </ul>
+            <h1>Advanced</h1>
+            <ul>
+                <li><a href="#Callback">Callback functions</a></li>
+                <li><a href="#CSS">CSS Setting functions</a></li>
+                <li><a href="#Buttons">Customize pager buttons</a></li>
+                <li><a href="#Combine">Combine with scrollCue.js</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#top">&#9650; Page Top</a></li>
+            </ul>
+            
+        </section>
+
+    </div>
+    <div class="flex-in">
+
+        <div id="Overview" class="Document">
+            <section>
+                <h1>Overview</h1>
+                <p>docSlider.js is a JavaScript plugin that works without jQuery.<br>
+                    Change the web sections to a one-page scroll.<br>
+                    It works on modern browser as Chrome, Firefox, Safari, Edge, IE11.</p>
+                <figure><img src="images/logo.svg" alt="docSlider.js" width="300"></figure>
+            </section>
+
+            <section>
+                <h2>Demo</h2>
+                <p><a href="https://prjct-samwest.github.io/docSlider/" target="_blank" rel="noopener">https://prjct-samwest.github.io/docSlider/</a></p>
+            </section>
+
+            <section>
+                <h2>Version</h2>
+                <p>The latest version is <span class="ver">-</span></p>
+            </section>
+
+            <section>
+                <h2>License</h2>
+                <p>Created by SamWest.<br>
+                    Copyright (c) 2020 SamWest.<br>
+                    This plugin is released under the MIT License.</p>
+            </section>
+        </div>
+        <div id="Install" class="Document">
+            <section>
+                <h1>Install</h1>
+                <p>Install it from npm or download the file.</p>
+            </section>
+
+            <section>
+                <h2>npm install</h2>
+                <pre><code>npm install docslider</code></pre>
+            </section>
+
+            <section>
+                <h2>File Download</h2>
+                <a href="#" class="dlink" data-text>aaa</a>
+            </section>
+        </div>
+        <div id="Usage" class="Document">
+            <section>
+                <h1>Usage</h1>
+            </section>
+            <section>
+                <h2>1. Include the CSS and JavaScript files</h2>
+                <p>Add a CSS to the <mark>&lt;head&gt;</mark> tag.</p>
+                <pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;docSlider.css&quot;&gt;</code></pre>
+                <p>Add a JavaScript to just before the <mark>&lt;/body&gt;</mark> tag.</p>
+                <pre><code class="html">&lt;script src=&quot;docSlider.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+            </section>
+            <section>
+                <h2>2. HTML markup</h2>
+                <pre><code class="html">&lt;div class=&quot;docSlider&quot;&gt;
+    &lt;section&gt;...&lt;/section&gt;
+    &lt;section&gt;...&lt;/section&gt;
+    &lt;section&gt;...&lt;/section&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+            <section>
+                <h2>3. Initialize docSlider.js</h2>
+                <pre><code class="html">&lt;script&gt;docSlider.init();&lt;/script&gt;</code></pre>
+            </section>
+        </div>
+        <div id="Options" class="Document">
+            <section>
+                <h1>Options</h1>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Option</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>speed</td>
+                        <td>int</td>
+                        <td>600</td>
+                        <td>Page change speed.(ms)</td>
+                    </tr>
+                    <tr>
+                        <td>easing</td>
+                        <td>string</td>
+                        <td>"ease"</td>
+                        <td>Page change easing animation. <br> It corresponds to the CSS property <mark>"transition-timing-function"</mark>.</td>
+                    </tr>
+                    <tr>
+                        <td>pager</td>
+                        <td>boolean</td>
+                        <td>true</td>
+                        <td>Show pager buttons.</td>
+                    </tr>
+                    <tr>
+                        <td>horizontal</td>
+                        <td>boolean</td>
+                        <td>false</td>
+                        <td>Horizontal scroll mode.</td>
+                    </tr>
+                    <tr>
+                        <td>startSpeed</td>
+                        <td>int</td>
+                        <td>null</td>
+                        <td>Page change speed when jumping from an external page using a hashtag. (ms) <br> If not set, it will be set to the same value as <mark>"speed"</mark>.</td>
+                    </tr>
+                    <tr>
+                        <td>scrollReset</td>
+                        <td>boolean</td>
+                        <td>false</td>
+                        <td>If the page is a scrolling element, it resets the scrolling value at each page change.</td>
+                    </tr>
+                    <tr>
+                        <td>complete</td>
+                        <td>function</td>
+                        <td></td>
+                        <td rowspan="3">Callback function. See <a href="#Callback">Callback functions</a> for details.</td>
+                    </tr>
+                    <tr>
+                        <td>beforeChange</td>
+                        <td>function</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>afterChange</td>
+                        <td>function</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>setInitCss</td>
+                        <td>function</td>
+                        <td></td>
+                        <td rowspan="2">CSS setting function. See <a href="#CSS">CSS Setting functions</a> for details.</td>
+                    </tr>
+                    <tr>
+                        <td>setChangeCss</td>
+                        <td>function</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Examples</h2>
+                <pre><code class="javascript">// change the speed
+docSlider.init({
+    speed : 500
+});
+
+// change the speed and easing
+docSlider.init({
+    speed : 500,
+    easing : 'ease-in-out'
+});</code></pre>
+            </section>
+
+        </div>
+        <div id="Methods" class="Document">
+            <section>
+                <h1>Methods</h1>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Arguments</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>init</td>
+                        <td>options</td>
+                        <td>Initialize docSlider.js.</td>
+                    </tr>
+                    <tr>
+                        <td>jumpPage</td>
+                        <td>to, speed, easing</td>
+                        <td>Jump to any page.</td>
+                    </tr>
+                    <tr>
+                        <td>nextPage</td>
+                        <td>speed, easing</td>
+                        <td>Jump to next page.</td>
+                    </tr>
+                    <tr>
+                        <td>prevPage</td>
+                        <td>speed, easing</td>
+                        <td>Jump to previous page.</td>
+                    </tr>
+                    <tr>
+                        <td>getOptions</td>
+                        <td>-</td>
+                        <td>Gets an options object value.</td>
+                    </tr>
+                    <tr>
+                        <td>getElements</td>
+                        <td>-</td>
+                        <td>Gets docSlider.js's Elements object value.</td>
+                    </tr>
+                    <tr>
+                        <td>getCurrentIndex</td>
+                        <td>-</td>
+                        <td>Gets an current page index value.</td>
+                    </tr>
+                    <tr>
+                        <td>getCurrentPage</td>
+                        <td>-</td>
+                        <td>Gets an current page element.</td>
+                    </tr>
+                    <tr>
+                        <td>enable</td>
+                        <td>toggle (boolean)</td>
+                        <td>Enable / disable all docSlider.js's operations.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>jumpPage method Example</h2>
+                <pre><code class="javascript">docSlider.jumpPage(2);  // Jumps to the page with index number 2 (page 3).</code></pre>
+            </section>
+
+            <section>
+                <h2>jumpPage method example (using a hashtag)</h2>
+                <pre><code class="javascript">docSlider.jumpPage('bar');  // Jumps to the page with id name 'bar' (page 2).</code></pre>
+                <p>If you want to use hashtag jump, you need to set the ID name if necessary.</p>
+                <pre><code class="html">&lt;div class=&quot;docSlider&quot;&gt;
+  &lt;section id=&quot;foo&quot;&gt;...&lt;/section&gt;
+  &lt;section id=&quot;bar&quot;&gt;...&lt;/section&gt;
+  &lt;section id=&quot;baz&quot;&gt;...&lt;/section&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+
+        </div>
+
+        <div id="Key" class="Document">
+            <section>
+                <h1>Supports key-press</h1>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Key</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>[ Space ] / [ PageDown ] / [ ArrowDown ]</td>
+                        <td>Scroll down / jump to next page.</td>
+                    </tr>
+                    <tr>
+                        <td>[ Shift ] + [ Space ] / [ PageUp ] / [ ArrowUp ]</td>
+                        <td>Scroll up / jump to previous page.</td>
+                    </tr>
+                    <tr>
+                        <td>[ End ]</td>
+                        <td>Jump to last page.</td>
+                    </tr>
+                    <tr>
+                        <td>[ Home ]</td>
+                        <td>Jump to first page.</td>
+                    </tr>
+                    <tr>
+                        <td>[ Tab ]</td>
+                        <td>Jump to next page.</td>
+                    </tr>
+                    <tr>
+                        <td>[ Shift ] + [ Tab ]</td>
+                        <td>Jump to previous page.</td>
+                    </tr>
+                    <tr>
+                        <td>[ ArrowRight ]</td>
+                        <td>Jump to next page. (horizontal mode only)</td>
+                    </tr>
+                    <tr>
+                        <td>[ ArrowLeft ]</td>
+                        <td>Jump to previous page. (horizontal mode only)</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <div id="Jump" class="Document">
+
+            <section>
+                <h1>Jump from external site to any page</h1>
+                <p>Just link like you would a normal anchor link.</p>
+                <pre><code class="html">&lt;a href=&quot;index.html#baz&quot;&gt;jump to #baz page&lt;/a&gt;</code></pre>
+                <p>If you want to use hashtag jump, you need to set the ID name if necessary.</p>
+                <pre><code class="html">&lt;div class=&quot;docSlider&quot;&gt;
+  &lt;section id=&quot;foo&quot;&gt;...&lt;/section&gt;
+  &lt;section id=&quot;bar&quot;&gt;...&lt;/section&gt;
+  &lt;section id=&quot;baz&quot;&gt;...&lt;/section&gt;
+&lt;/div&gt;</code></pre>
+            </section>
+        </div>
+        <div id="Scroll" class="Document">
+            <section>
+                <h1>Supports scroll elements</h1>
+                <p>You can avoid mouse wheel event conflicts by simply adding the class name <mark>"docSlider-scroll"</mark> to the scrolling element.</p>
+                <pre><code class="html">&lt;div class=&quot;docSlider-scroll&quot;&gt;
+  ....
+  ....
+  ....
+&lt;/div&gt;</code></pre>
+            </section>
+        </div>
+        <div id="Class" class="Document">
+            <section>
+                <h1>Automatically added class names</h1>
+                <p>When you initialize docSlider.js, some class names that represent the current page are automatically added to the
+                    <mark>&lt;html&gt;</mark> tag.</p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Class name</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>.docSlider-index_0</td>
+                        <td>Index number of the current page. In this case it is 0.</td>
+                    </tr>
+                    <tr>
+                        <td>.docSlider-page_1</td>
+                        <td>Page number of the current page. In this case it is 1.(equal Index number + 1)</td>
+                    </tr>
+                    <tr>
+                        <td>.docSlider-id_foo</td>
+                        <td>Id attribute of the current page. In this case it is "foo". (only if you set the Id.)</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <div id="Callback" class="Document">
+            <section>
+                <h1>Callback functions</h1>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>function</th>
+                        <th>Params</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>complete</td>
+                        <td>options, elements</td>
+                        <td>Triggered after the docSlider.js has been initialized.</td>
+                    </tr>
+                    <tr>
+                        <td>beforeChange</td>
+                        <td>index, page, toIndex, toPage, type</td>
+                        <td>Triggered before the page changes.</td>
+                    </tr>
+                    <tr>
+                        <td>afterChange</td>
+                        <td>index, page, fromIndex, fromPage, type</td>
+                        <td>Triggered after the page changes.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h2>Params</h2>
+                <pre><code>options   : options object value.
+elements  : docSlider's elements object. {wrapper, pages, pager, buttons}
+index     : current page index value.
+page      : current page element.
+toIndex   : destination page index value.
+toPage    : destination page element.
+fromIndex : source page index value.
+fromPage  : source page element.
+type      : page change type.
+            "scroll" / "pager" / "anchor" / "key" / "focus" / "jumpPage" / "nextPage" / "prevPage"
+</code></pre>
+            </section>
+            <section>
+                <h2>Examples</h2>
+                <pre><code class="javascript">docSlider.init({
+    beforeChange : function(index){
+        console.log('current index is ' + index);
+    }
+});</code></pre>
+            </section>
+        </div>
+        <div id="CSS" class="Document">
+            <section>
+                <h1>CSS Setting functions</h1>
+                <p>If you want to change the initial placement of the page or the CSS settings for page changes, please use it.</p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>function</th>
+                        <th>Params</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>setInitCss</td>
+                        <td>index, horizontal</td>
+                        <td>Invoked to initialize each page. <br> Function to set the initial position CSS of the page.</td>
+                    </tr>
+                    <tr>
+                        <td>setChangeCss</td>
+                        <td>index, currentIndex, speed, easing, horizontal</td>
+                        <td>Invoked to change each page. <br> Function to set the 'transition' of each page.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h2>Params</h2>
+                <pre><code>index        : page element's index value.
+currentIndex : current page element's index value.
+horizontal   : horizontal mode boolean value.
+speed        : option's speed values
+easing       : option's easing values
+</code></pre>
+            </section>
+            <section>
+                <h2>setInitCss</h2>
+                <p>By default settings, the "top" or "left" property is used to place each page.</p>
+                <pre><code class="javascript"> function(index, horizontal){
+
+    const point = horizontal ? 'left' : 'top';
+    const style = {};
+
+    style[point] = index * 100 + '%';
+
+    return style;
+
+}</code></pre>
+            </section>
+            <section>
+                <h2>setChangeCss</h2>
+                <p>By default settings, the "transition" property is used to make moves on each page.</p>
+                <pre><code class="javascript">function (index, currentIndex, speed, easing, horizontal) {
+
+    const xy = horizontal ? 'X' : 'Y';
+    const style = {};
+
+    style.transitionProperty = 'transform';
+    style.transitionDuration = speed + 'ms';
+    style.transitionTimingFunction = easing;
+    style.transform = 'translate' + xy + '(-' + currentIndex * 100 + '%)';
+
+    return style;
+
+}</code></pre>
+            </section>
+        </div>
+        <div id="Buttons" class="Document">
+            <section>
+                <h1>Customize pager buttons</h1>
+
+                <section>
+                    <h2>Change pager buttons style</h2>
+                    <p>If you want to change the style of the pager buttons, change the following lines of docSlider.css or docSlider.scss<br>
+                        The active button will be set to the class name <mark>".selected"</mark>.</p>
+                    <div class="flex" style="margin-top: 1em;">
+                        <div class="flex-in" style="margin-right: 20px;">
+                            <h3>docSlider.css</h3>
+                            <pre><code class="css">/* CHANGE THE PAGER STYLE */
+.docSlider-pager {
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+/* CHANGE THE BUTTON STYLE */
+.docSlider-button {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  margin: 5px 0;
+  background-color: #333;
+  opacity: .25;
+  appearance: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+.docSlider-button.selected {
+  opacity: 1;
+}
+
+.docSlider-button:active {
+  outline: none;
+}
+</code></pre>
+                        </div>
+                        <div class="flex-in" style="margin-left: 20px">
+                            <h3>docSlider.css</h3>
+                            <pre><code class="css">/* CHANGE THE PAGER STYLE */
+.docSlider-pager{
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+/* CHANGE THE BUTTON STYLE */
+.docSlider-button{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  margin: 5px 0;
+  background-color: #333;
+  opacity: .25;
+  appearance: none;
+  border: none;
+  box-sizing: border-box;
+
+  &amp;.selected{
+    opacity: 1;
+  }
+
+  &amp;:active{
+    outline: none;
+  }
+
+}
+</code></pre>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Change pager buttons mark-up</h2>
+                    <p>If you want to change the markup on the pager buttons, add the <mark>".docSlider-pager"</mark> tag as shown below.<br>
+                        Don't forget to add the class name <mark>"docSlider-button"</mark> to the child elements.<br>
+                        ...then, rewrite the CSS/SCSS file as needed.
+                    </p>
+                    <pre><code class="html">&lt;div class=&quot;docSlider&quot;&gt;
+
+    &lt;div class=&quot;docSlider-pager&quot;&gt;
+        &lt;div class=&quot;docSlider-button&quot;&gt;page1&lt;/div&gt;
+        &lt;div class=&quot;docSlider-button&quot;&gt;page2&lt;/div&gt;
+        &lt;div class=&quot;docSlider-button&quot;&gt;page3&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;section&gt;...&lt;/section&gt;
+    &lt;section&gt;...&lt;/section&gt;
+    &lt;section&gt;...&lt;/section&gt;
+
+&lt;/div&gt;</code></pre>
+                </section>
+
+            </section>
+        </div>
+        <div id="Combine" class="Document">
+            <section>
+                <h1>Combine with scrollCue.js</h1>
+                <p>docSlider.js can be used in combination with scrollCue.js.<br>
+                    More information about scrollCue.js. <a href="../scrollCue/" target="_blank" rel="noopener">can be found here.</a></p>
+            </section>
+            <section>
+                <h2>Usage</h2>
+                <h3>1. Add the scrollCue.js CSS and JavaScript files.</h3>
+                <pre><code class="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;docSlider.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;scrollCue.css&quot;&gt;</code></pre>
+                <pre><code class="html">&lt;script src=&quot;docSlider.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;scrollCue.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                <h3>2. Initialize  scrollCue.js <strong style="color: red">before docSlider.js initialize.</strong></h3>
+                <p>Don't forget to set the options on the scrollCue.js side, at that time.</p>
+                <pre><code class="html">&lt;script&gt;
+    scrollCue.init({docSlider:true});
+    docSlider.init();
+&lt;/script&gt;
+</code></pre>
+            </section>
+            <section>
+                <h2>Examples</h2>
+                <p>This is an example of using pageChangeReset and scrollReset.</p>
+                <pre><code class="html">&lt;script&gt;
+    scrollCue.init({docSlider:true,pageChangeReset:true});
+    docSlider.init({scrollReset:true});
+&lt;/script&gt;</code></pre>
+            </section>
+        </div>
+
+    </div>
+</div>
+
+
+
+<footer class="Footer">
+    <i class="Footer-pageTop"></i>
+    <p>&copy; SamWest.</p>
+</footer>
+
+<script src="js/settings.min.js"></script>
+<script src="js/document.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+h2 {
+  font-size: 30px;
+  margin-bottom: .5em;
+}
+
+.InnerBox {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Intro {
+  background-color: #DFEDF2;
+  text-align: center;
+}
+
+.Intro p {
+  margin-top: 30px;
+}
+
+.Nojquery {
+  background-color: #fafafa;
+}
+
+.Keys {
+  background-color: #E2F2D6;
+}
+
+.Scroll {
+  background-color: #FFF5F5;
+}
+
+.Scroll .InnerBox {
+  height: 150%;
+}
+
+.Scroll .Scroll-box {
+  margin-top: 1em;
+  border: 1px solid #666;
+  padding: 10px;
+  height: 150px;
+  max-width: 500px;
+  width: 100%;
+  overflow: auto;
+}
+
+.Anchor {
+  background-color: #F9FBBB;
+}
+
+.Outro {
+  background-color: #DFEDF2;
+  text-align: center;
+}
+
+.Outro h1 {
+  margin-bottom: 30px;
+}
+
+.Outro p {
+  margin-top: 1em;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  background-color: #1FCA4F;
+  color: white;
+  width: 200px;
+  border-radius: 3px;
+  line-height: 3;
+  text-decoration: none;
+  border-bottom: 4px solid #1aab43;
+}
+
+.btn:hover {
+  background-color: #1ec14c;
+}
+
+@media screen and (max-width: 667px) {
+  h2 {
+    font-size: 20px;
+  }
+  .Intro p {
+    text-align: left;
+  }
+  .Intro img, .Outro img {
+    max-width: 100%;
+    width: 200px;
+  }
+  .InnerBox .InnerBox-in {
+    padding: 50px;
+  }
+}
