@@ -75,6 +75,9 @@ const settings = (function (){
     (function setDownloadLink(ver){
 
         let zipLinks = document.querySelectorAll('a.dlink');
+        let verText = document.querySelector('.ver');
+
+        verText.innerHTML = ver;
 
         for(let i=0; i<zipLinks.length; i++){
 
@@ -87,7 +90,7 @@ const settings = (function (){
 
         }
 
-    })();
+    })(ver);
 
     return {
         printHeader : function (page){
