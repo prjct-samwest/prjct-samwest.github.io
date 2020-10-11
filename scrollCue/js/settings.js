@@ -77,6 +77,7 @@ const settings = (function (){
         let zipLinks = document.querySelectorAll('a.dlink');
         let verText = document.querySelector('.ver');
 
+        if(verText)
         verText.innerHTML = ver;
 
         for(let i=0; i<zipLinks.length; i++){
