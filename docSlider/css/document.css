@@ -1,7 +1,6 @@
 body {
   background-color: #eee;
   margin: 70px 20px 0;
-  min-width: 1100px;
   line-height: 1.6;
 }
 
@@ -133,4 +132,102 @@ code {
   font-size: 22px;
   margin-bottom: .5em;
   border-bottom: solid 1px #eee;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.Btn {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  body {
+    margin: 64px 10px 0;
+  }
+  .flex {
+    display: block;
+  }
+  img {
+    max-width: 100%;
+  }
+  .Document {
+    padding: 20px;
+  }
+  .Document h1 {
+    font-size: 24px;
+  }
+  .Document h2 {
+    font-size: 18px;
+  }
+  .Table-wrap {
+    overflow: auto;
+  }
+  .Table-wrap table {
+    min-width: 100%;
+    width: 500px;
+  }
+  .ml20 {
+    margin-top: 1em;
+    margin-left: 0;
+  }
+  .Toc {
+    transition: right .25s;
+    right: -280px;
+    background-color: #24292e;
+    color: #FFFAFA;
+    margin-bottom: 0;
+    padding: 16px;
+    left: auto;
+    z-index: 1000;
+    top: 51px;
+    width: 280px;
+  }
+  .Toc a, .Toc a:hover {
+    color: #FFFAFA;
+    background-color: transparent;
+    line-height: 2;
+  }
+  .Toc a.active, .Toc a:active, .Toc a:hover.active, .Toc a:hover:active {
+    background-color: #191c20;
+  }
+  .Btn {
+    transition: right .25s;
+    right: 0;
+    color: #FFFAFA;
+    display: block;
+    position: fixed;
+    top: 51px;
+    z-index: 1000;
+    height: 50px;
+    width: 50px;
+    background-color: #24292e;
+    text-align: center;
+    font-size: 10px;
+    padding-top: 3px;
+    cursor: pointer;
+  }
+  .Btn:after {
+    content: '';
+    display: block;
+    background-color: #FFFAFA;
+    height: 1px;
+    position: absolute;
+    width: 24px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 22px;
+    box-shadow: 0 8px #FFFAFA, 0 16px #FFFAFA;
+  }
+  .menu .Btn {
+    right: 280px;
+  }
+  .menu .Toc {
+    right: 0;
+  }
+  .Footer {
+    margin: 0 -10px;
+  }
 }

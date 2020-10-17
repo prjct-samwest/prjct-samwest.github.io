@@ -10,7 +10,6 @@
 body{
   background-color: #eee;
   margin: 70px 20px 0;
-  min-width: 1100px;
   font-family: 'Inter', sans-serif;
   color: #333;
   line-height: 1.6;
@@ -162,6 +161,11 @@ code{
 
 }
 
+.Btn{
+  display: none;
+}
+
+
 .Footer{
   font-size: 14px;
   background-color: #333;
@@ -169,4 +173,155 @@ code{
   color: #fff;
   margin: 0 -20px;
   line-height: 2;
+}
+
+
+@media screen and (max-width: 1080px) {
+
+  body{
+    margin: 64px 10px 0;
+  }
+
+  .flex{
+    display: block;
+  }
+
+  img{
+    max-width: 100%;
+  }
+
+  .Document{
+    padding: 20px;
+
+    h1{
+      font-size: 24px;
+    }
+    h2{
+      font-size: 18px;
+    }
+  }
+
+  .Table-wrap{
+    overflow: auto;
+    table{
+      min-width: 100%;
+      width: 500px;
+    }
+  }
+
+  .ml20{
+    margin-top: 1em;
+    margin-left: 0;
+  }
+
+
+  .Toc{
+    transition:right .25s;
+    right: -280px;
+    background-color: #24292e;
+    color: #FFFAFA;
+    margin-bottom: 0;
+    padding: 16px;
+    left: auto;
+    z-index: 1000;
+    top: 49px;
+    width: 280px;
+
+    a,a:hover{
+      color: #FFFAFA;
+      background-color: transparent;
+      line-height: 2;
+
+      &.active, &:active{
+        background-color: darken(#24292e,5%);
+      }
+    }
+
+  }
+
+  .Btn{
+    transition:right .25s;
+
+    right: 0;
+    color: #FFFAFA;
+    display: block;
+    position: fixed;
+    top: 49px;
+    z-index: 1000;
+    height: 50px;
+    width: 50px;
+    background-color: #24292e;
+    text-align: center;
+    font-size: 10px;
+    padding-top: 3px;
+    cursor: pointer;
+
+    &:after{
+      content: '';
+      display: block;
+      background-color: #FFFAFA;
+      height: 1px;
+      position: absolute;
+      width: 24px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 22px;
+      box-shadow: 0 8px #FFFAFA, 0 16px #FFFAFA;
+    }
+  }
+
+  .menu{
+    .Btn{
+      right: 280px;
+    }
+    .Toc{
+      right: 0;
+    }
+  }
+
+  .Footer{
+    margin: 0 -10px;
+  }
+}
+
+@media screen and (max-width: 677px) {
+  .Header{
+    padding: 5px;
+    height:auto;
+    display: block;
+
+    .Header-logo{
+      position: static;
+      margin: 10px auto;
+    }
+
+    .Header-menu{
+      ul{
+        justify-content: center;
+      }
+      a,span{
+        line-height: 2;
+      }
+    }
+
+    .Header-icon{
+      position: absolute;
+      top: 12px;
+      right: 10px;
+    }
+
+  }
+
+  .Toc{
+    top: 89px;
+  }
+
+  .Btn{
+    top: 89px;
+  }
+
+  body{
+    margin-top: 104px;
+  }
 }

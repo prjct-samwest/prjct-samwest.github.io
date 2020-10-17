@@ -99,3 +99,16 @@
     window.addEventListener('scrolled',focusToc);
 
 })();
+
+(function (){
+
+    let btn = document.querySelector('.Btn');
+    let html = document.documentElement;
+
+    btn.addEventListener('click',function (){
+
+        html.classList.toggle('menu');
+
+    });
+
+})();

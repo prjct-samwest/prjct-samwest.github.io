@@ -12,6 +12,8 @@
     </script>
 
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <meta property="og:type" content="website">
@@ -32,6 +34,7 @@
 <div class="flex">
     <div class="flex-in flex-side">
 
+        <span class="Btn">TOC</span>
         <section class="Toc">
             <h1>Basic</h1>
             <ul>
@@ -59,7 +62,7 @@
             <ul>
                 <li><a href="#top">&#9650; Page Top</a></li>
             </ul>
-            
+
         </section>
 
     </div>
@@ -134,81 +137,83 @@
         <div id="Options" class="Document">
             <section>
                 <h1>Options</h1>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Option</th>
-                        <th>Type</th>
-                        <th>Default</th>
-                        <th>Description</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>speed</td>
-                        <td>int</td>
-                        <td>600</td>
-                        <td>Page change speed.(ms)</td>
-                    </tr>
-                    <tr>
-                        <td>easing</td>
-                        <td>string</td>
-                        <td>"ease"</td>
-                        <td>Page change easing animation. <br> It corresponds to the CSS property <mark>"transition-timing-function"</mark>.</td>
-                    </tr>
-                    <tr>
-                        <td>pager</td>
-                        <td>boolean</td>
-                        <td>true</td>
-                        <td>Show pager buttons.</td>
-                    </tr>
-                    <tr>
-                        <td>horizontal</td>
-                        <td>boolean</td>
-                        <td>false</td>
-                        <td>Horizontal scroll mode.</td>
-                    </tr>
-                    <tr>
-                        <td>startSpeed</td>
-                        <td>int</td>
-                        <td>null</td>
-                        <td>Page change speed when jumping from an external page using a hashtag. (ms) <br> If not set, it will be set to the same value as <mark>"speed"</mark>.</td>
-                    </tr>
-                    <tr>
-                        <td>scrollReset</td>
-                        <td>boolean</td>
-                        <td>false</td>
-                        <td>If the page is a scrolling element, it resets the scrolling value at each page change.</td>
-                    </tr>
-                    <tr>
-                        <td>complete</td>
-                        <td>function</td>
-                        <td></td>
-                        <td rowspan="3">Callback function. See <a href="#Callback">Callback functions</a> for details.</td>
-                    </tr>
-                    <tr>
-                        <td>beforeChange</td>
-                        <td>function</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>afterChange</td>
-                        <td>function</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>setInitCss</td>
-                        <td>function</td>
-                        <td></td>
-                        <td rowspan="2">CSS setting function. See <a href="#CSS">CSS Setting functions</a> for details.</td>
-                    </tr>
-                    <tr>
-                        <td>setChangeCss</td>
-                        <td>function</td>
-                        <td></td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="Table-wrap">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Type</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>speed</td>
+                            <td>int</td>
+                            <td>600</td>
+                            <td>Page change speed.(ms)</td>
+                        </tr>
+                        <tr>
+                            <td>easing</td>
+                            <td>string</td>
+                            <td>"ease"</td>
+                            <td>Page change easing animation. <br> It corresponds to the CSS property <mark>"transition-timing-function"</mark>.</td>
+                        </tr>
+                        <tr>
+                            <td>pager</td>
+                            <td>boolean</td>
+                            <td>true</td>
+                            <td>Show pager buttons.</td>
+                        </tr>
+                        <tr>
+                            <td>horizontal</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Horizontal scroll mode.</td>
+                        </tr>
+                        <tr>
+                            <td>startSpeed</td>
+                            <td>int</td>
+                            <td>null</td>
+                            <td>Page change speed when jumping from an external page using a hashtag. (ms) <br> If not set, it will be set to the same value as <mark>"speed"</mark>.</td>
+                        </tr>
+                        <tr>
+                            <td>scrollReset</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>If the page is a scrolling element, it resets the scrolling value at each page change.</td>
+                        </tr>
+                        <tr>
+                            <td>complete</td>
+                            <td>function</td>
+                            <td></td>
+                            <td rowspan="3">Callback function. See <a href="#Callback">Callback functions</a> for details.</td>
+                        </tr>
+                        <tr>
+                            <td>beforeChange</td>
+                            <td>function</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>afterChange</td>
+                            <td>function</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>setInitCss</td>
+                            <td>function</td>
+                            <td></td>
+                            <td rowspan="2">CSS setting function. See <a href="#CSS">CSS Setting functions</a> for details.</td>
+                        </tr>
+                        <tr>
+                            <td>setChangeCss</td>
+                            <td>function</td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
 
             <section>
@@ -229,6 +234,7 @@ docSlider.init({
         <div id="Methods" class="Document">
             <section>
                 <h1>Methods</h1>
+                <div class="Table-wrap">
                 <table>
                     <thead>
                     <tr>
@@ -285,6 +291,7 @@ docSlider.init({
                     </tr>
                     </tbody>
                 </table>
+                </div>
             </section>
 
             <section>
@@ -308,6 +315,7 @@ docSlider.init({
         <div id="Key" class="Document">
             <section>
                 <h1>Supports key-press</h1>
+                <div class="Table-wrap">
                 <table>
                     <thead>
                     <tr>
@@ -350,6 +358,7 @@ docSlider.init({
                     </tr>
                     </tbody>
                 </table>
+                </div>
             </section>
         </div>
         <div id="Jump" class="Document">
@@ -382,6 +391,7 @@ docSlider.init({
                 <h1>Automatically added class names</h1>
                 <p>When you initialize docSlider.js, some class names that represent the current page are automatically added to the
                     <mark>&lt;html&gt;</mark> tag.</p>
+                <div class="Table-wrap">
                 <table>
                     <thead>
                     <tr>
@@ -404,12 +414,14 @@ docSlider.init({
                     </tr>
                     </tbody>
                 </table>
+                </div>
             </section>
         </div>
 
         <div id="Callback" class="Document">
             <section>
                 <h1>Callback functions</h1>
+                <div class="Table-wrap">
                 <table>
                     <thead>
                     <tr>
@@ -436,6 +448,7 @@ docSlider.init({
                     </tr>
                     </tbody>
                 </table>
+                </div>
             </section>
             <section>
                 <h2>Params</h2>
@@ -464,6 +477,7 @@ type      : page change type.
             <section>
                 <h1>CSS Setting functions</h1>
                 <p>If you want to change the initial placement of the page or the CSS settings for page changes, please use it.</p>
+                <div class="Table-wrap">
                 <table>
                     <thead>
                     <tr>
@@ -485,6 +499,7 @@ type      : page change type.
                     </tr>
                     </tbody>
                 </table>
+                </div>
             </section>
             <section>
                 <h2>Params</h2>
@@ -536,7 +551,7 @@ easing       : option's easing values
                     <p>If you want to change the style of the pager buttons, change the following lines of docSlider.css or docSlider.scss<br>
                         The active button will be set to the class name <mark>".selected"</mark>.</p>
                     <div class="flex" style="margin-top: 1em;">
-                        <div class="flex-in" style="margin-right: 20px;">
+                        <div class="flex-in">
                             <h3>docSlider.css</h3>
                             <pre><code class="css">/* CHANGE THE PAGER STYLE */
 .docSlider-pager {
@@ -571,7 +586,7 @@ easing       : option's easing values
 }
 </code></pre>
                         </div>
-                        <div class="flex-in" style="margin-left: 20px">
+                        <div class="flex-in ml20">
                             <h3>docSlider.css</h3>
                             <pre><code class="css">/* CHANGE THE PAGER STYLE */
 .docSlider-pager{
