@@ -1,6 +1,6 @@
 (function (){
 
-    const ver = '3.0.0';
+    const ver = '3.0.1';
 
     setHeader();
     setDownloadLink(ver);
