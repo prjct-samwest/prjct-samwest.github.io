@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180197017-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <!--    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180197017-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        gtag('config', 'UA-180197017-1');
-    </script>
-
+            gtag('config', 'UA-180197017-1');
+        </script>
+    -->
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -26,6 +26,7 @@
     <title>docSlider.js ::: Change the web sections to a one-page scroll.</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/docSlider.css">
+    <link rel="stylesheet" href="../scrollCue/css/scrollCue.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -35,73 +36,94 @@
 
     <section class="Intro">
         <div class="InnerBox">
-        <div class="InnerBox-in">
-            <h1><img src="images/logo.svg" alt="docSlider.js" width="300"></h1>
-            <p>docSlider.js is a JavaScript plugin that works without jQuery.<br>
-                Change the web sections to a one-page scroll.</p>
-        </div>
+            <div class="InnerBox-in">
+                <h1><img src="images/logo.svg" alt="docSlider.js" width="300"></h1>
+                <p>docSlider.js is a JavaScript plugin that works without jQuery.<br>
+                    Change the web sections to a one-page scroll.</p>
+            </div>
         </div>
     </section>
 
     <section class="Nojquery">
         <div class="InnerBox">
-        <div class="InnerBox-in">
+            <div class="InnerBox-in">
                 <h2>You don't need jQuery</h2>
                 <p>So you don't have to worry about conflicts with other JavaScript libraries.<br>
                     You only need two files: CSS and JavaScript.</p>
-        </div>
+            </div>
         </div>
     </section>
 
     <section class="Keys">
         <div class="InnerBox">
-        <div class="InnerBox-in">
-            <h2>Support for key presses</h2>
-            <p>The following key inputs are supported. Let's try it.<br>
-                Tab, Space, ArrowDown, ArrowUp, PageUp, PageDown, Home, End</p>
-        </div>
+            <div class="InnerBox-in">
+                <h2>Support for key presses</h2>
+                <p>The following key inputs are supported. Let's try it.<br>
+                    Tab, Space, ArrowDown, ArrowUp, PageUp, PageDown, Home, End</p>
+            </div>
         </div>
     </section>
 
     <section class="Scroll">
         <div class="InnerBox">
-        <div class="InnerBox-in">
-            <h2>Support for scroll element</h2>
-            <p>You don't have to worry about scrolling events and mouse wheel conflicts.</p>
-            <div class="Scroll-box docSlider-scroll">
-                scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>
-                scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>
-                scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>
+            <div class="InnerBox-in">
+                <h2>Support for scroll element</h2>
+                <p>You don't have to worry about scrolling events and mouse wheel conflicts.</p>
+                <div class="Scroll-box docSlider-scroll">
+                    scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>
+                    scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>
+                    scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>scroll this!<br>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 
     <section class="Anchor" id="anchor">
         <div class="InnerBox">
-        <div class="InnerBox-in">
-            <h2>Support for anchor link</h2>
-            <p>By setting up an anchor link, you can jump to any section from an external page.<br>
-                <a href="#anchor" target="_blank" rel="noopener">Let's try it!</a></p>
-        </div>
+            <div class="InnerBox-in">
+                <h2>Support for anchor link</h2>
+                <p>By setting up an anchor link, you can jump to any section from an external page.<br>
+                    <a href="#anchor" target="_blank" rel="noopener">Let's try it!</a></p>
+            </div>
         </div>
     </section>
 
     <section class="Outro">
         <div class="InnerBox">
-        <div class="InnerBox-in">
-            <h1><img src="images/logo.svg" width="300" alt="docSlider.js"></h1>
-            <p><a href="https://github.com/prjct-samwest/docSlider/" target="_blank" rel="noopener" class="btn">View on GitHub</a></p>
-            <p class="sp"><a href="" target="_blank" rel="noopener" class="btn dlink">File Download</a></p>
+            <div class="InnerBox-in">
+                <h1><img src="images/logo.svg" width="300" alt="docSlider.js"></h1>
+                <p><a href="https://github.com/prjct-samwest/docSlider/" target="_blank" rel="noopener" class="btn">View on GitHub</a></p>
+                <p class="sp"><a href="" target="_blank" rel="noopener" class="btn dlink">File Download</a></p>
+            </div>
         </div>
+    </section>
+
+    <section class="Ds" id="ds">
+        <div class="InnerBox">
+            <div class="InnerBox-in">
+                <h2><span>You can combine with<br><img src="../scrollCue/images/logo.svg"  width="240" alt="scrollCue.js"></span></h2>
+                <ul data-cues="slideInLeft" data-group="scrollCue">
+                    <li><img src="../scrollCue/images/001.jpg" alt="*" width="100"></li>
+                    <li><img src="../scrollCue/images/002.jpg" alt="*" width="100"></li>
+                    <li><img src="../scrollCue/images/003.jpg" alt="*" width="100"></li>
+                    <li><img src="../scrollCue/images/004.jpg" alt="*" width="100"></li>
+                    <li><img src="../scrollCue/images/005.jpg" alt="*" width="100"></li>
+                    <li><img src="../scrollCue/images/006.jpg" alt="*" width="100"></li>
+                    <li><img src="../scrollCue/images/007.jpg" alt="*" width="100"></li>
+                    <li><img src="../scrollCue/images/008.jpg" alt="*" width="100"></li>
+                </ul>
+                <p><a href="../scrollCue/" class="btn">view scrollCue.js</a></p>
+            </div>
         </div>
     </section>
 
 </div>
 
 <script src="js/docSlider.min.js"></script>
+<script src="../scrollCue/js/scrollCue.min.js"></script>
 <script src="js/settings.min.js"></script>
 <script>
+    scrollCue.init({docSlider:true,pageChangeReset:true});
     docSlider.init();
 </script>
 </body>
